@@ -63,3 +63,6 @@ nnoremap <c-k> :m -2<cr>
 nnoremap H g0
 nnoremap L g$
 
+" exit insert mode without stretching fingers
+inoremap jk <esc>
+
