@@ -35,7 +35,6 @@ colorscheme solarized
 nnoremap <leader>- ddp
 nnoremap <leader>_ ddkkp
 nnoremap <leader>u viwUel
-inoremap <leader>u <esc>viwUeli
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
