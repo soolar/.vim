@@ -1,4 +1,3 @@
-
 set number
 set linebreak
 set showbreak=+++
@@ -18,8 +17,6 @@ set smartindent
 set smarttab
 set softtabstop=2
 
-
-set ruler
 set showtabline=2
 
 set undolevels=1000
@@ -82,4 +79,19 @@ vnoremap <right> <nop>
 
 " just some shorthands
 iabbrev ret return
+
+" statusline stuff
+set laststatus=2
+set statusline=%t       "tail of the filename
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+set statusline+=%{&ff}] "file format
+set statusline+=%h      "help file flag
+set statusline+=%m      "modified flag
+set statusline+=%r      "read only flag
+set statusline+=%y      "filetype
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=\ %P    "percent through file
+set statusline+=\ %{fugitive#statusline()}
 
