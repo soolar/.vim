@@ -43,12 +43,14 @@ inoremap <leader>u <esc>viwUeli
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>l
-vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>l
-vnoremap <leader>` <esc>`<i`<esc>`>la`<esc>l
-vnoremap <leader>( <esc>`<i(<esc>`>la)<esc>l
-vnoremap <leader>[ <esc>`<i[<esc>`>la]<esc>l
-vnoremap <leader>{ <esc>`<i{<esc>`>la}<esc>l
+" wraps highlighted text
+vnoremap <leader>" <esc>a"<esc>`<i"<esc>
+vnoremap <leader>' <esc>a'<esc>`<i'<esc>
+vnoremap <leader>` <esc>a`<esc>`<i`<esc>
+vnoremap <leader>( <esc>a)<esc>`<i(<esc>
+vnoremap <leader>[ <esc>a]<esc>`<i[<esc>
+vnoremap <leader>{ <esc>a}<esc>`<i{<esc>
+vnoremap <leader>< <esc>a><esc>`<i<<esc>
 
 nnoremap <leader>h :nohlsearch<cr>
 
