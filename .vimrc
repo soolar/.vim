@@ -80,3 +80,6 @@ vnoremap <down> <nop>
 vnoremap <left> <nop>
 vnoremap <right> <nop>
 
+" just some shorthands
+iabbrev ret return
+
