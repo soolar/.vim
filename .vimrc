@@ -52,11 +52,14 @@ vnoremap <leader>[ <esc>a]<esc>`<i[<esc>
 vnoremap <leader>{ <esc>a}<esc>`<i{<esc>
 vnoremap <leader>< <esc>a><esc>`<i<<esc>
 
+" turns off highlighting all matches after a search
 nnoremap <leader>h :nohlsearch<cr>
 
+" move lines of text up or down
 nnoremap <c-j> :m +1<cr>
 nnoremap <c-k> :m -2<cr>
 
+" strong left and right
 nnoremap H g0
 nnoremap L g$
 
