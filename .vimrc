@@ -22,7 +22,7 @@ set showtabline=2
 set undolevels=1000
 set backspace=indent,eol,start
 
-let mapleader = "-"
+let mapleader = ","
 let maplocalleader = "\\"
 
 execute pathogen#infect()
