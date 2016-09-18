@@ -75,6 +75,8 @@ vnoremap <up> <nop>
 vnoremap <down> <nop>
 vnoremap <left> <nop>
 vnoremap <right> <nop>
+" also stop allowing esc to exit insert to train myself to use the jk mapping
+inoremap <esc> <nop>
 
 " just some shorthands
 iabbrev ret return
