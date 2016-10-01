@@ -1,11 +1,41 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+ 
+" git plugin
+Plugin 'tpope/vim-fugitive'
+" solarized dark
+Plugin 'altercation/vim-colors-solarized.git'
+" kolmafia .ash syntax highlighting
+Plugin 'quisquous/vim-kolmafia.git' 
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+ 
+syntax on
 set number
 set linebreak
 set showbreak=+++
 set textwidth=100
 set noshowmatch
 set visualbell
-" highlight all search matches
-set hlsearch
 set smartcase
 set ignorecase
 set incsearch
@@ -24,10 +54,6 @@ set backspace=indent,eol,start
 
 let mapleader = ","
 let maplocalleader = "\\"
-
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
 
 set background=dark
 colorscheme solarized
