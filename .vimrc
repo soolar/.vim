@@ -7,13 +7,20 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
- 
+
 " git plugin
 Plugin 'tpope/vim-fugitive'
 " solarized dark
 Plugin 'altercation/vim-colors-solarized.git'
 " kolmafia .ash syntax highlighting
-Plugin 'quisquous/vim-kolmafia.git' 
+Plugin 'quisquous/vim-kolmafia.git'
+" C/C++ autocomplete, and some other things
+Plugin 'Valloric/YouCompleteMe'
+" Generator for YCM config
+Plugin 'rdnetto/YCM-Generator'
+" fancy start screen
+Plugin 'mhinz/vim-startify'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -28,7 +35,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
- 
+
 syntax on
 set number
 set linebreak
@@ -58,10 +65,13 @@ let maplocalleader = "\\"
 set background=dark
 colorscheme solarized
 
-nnoremap <leader>- ddp
-nnoremap <leader>_ ddkkp
+" capitalize current word
 nnoremap <leader>u viwUel
 
+" strip trailing whitespace
+nnoremap <leader>st :let _s=@/<bar>:%s/\s\+$//e<bar>:let @/=_s<bar><cr>
+
+" open up/reload this file
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
@@ -82,30 +92,23 @@ nnoremap <c-j> :m +1<cr>
 nnoremap <c-k> :m -2<cr>
 
 " strong left and right
-nnoremap H g0
-nnoremap L g$
+noremap H g0
+noremap L g$
 
-" exit insert mode without stretching fingers
+" return to normal mode without stretching fingers
 inoremap jk <esc>
 
 " stop allowing arrow keys to break that habit
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-vnoremap <up> <nop>
-vnoremap <down> <nop>
-vnoremap <left> <nop>
-vnoremap <right> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
 " also stop allowing esc to exit insert to train myself to use the jk mapping
 inoremap <esc> <nop>
 
 " just some shorthands
 iabbrev ret return
+iabbrev sstr std::string
 
 " statusline stuff
 set laststatus=2
