@@ -80,6 +80,10 @@ nnoremap <leader>st :let _s=@/<bar>:%s/\s\+$//e<bar>:let @/=_s<bar><cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" some ycm shorthands
+nnoremap <leader>f :YcmCompleter FixIt<cr>
+nnoremap <leader>g :YcmDiag<cr>
+
 " wraps highlighted text
 vnoremap <leader>" <esc>a"<esc>`<i"<esc>
 vnoremap <leader>' <esc>a'<esc>`<i'<esc>
