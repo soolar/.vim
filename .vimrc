@@ -115,6 +115,9 @@ noremap <right> <nop>
 " also stop allowing esc to exit insert to train myself to use the jk mapping
 inoremap <esc> <nop>
 
+" wrap commit messages at 72 characters
+autocmd FileType gitcommit set textwidth=72
+
 " just some shorthands
 iabbrev ret return
 iabbrev sstr std::string
