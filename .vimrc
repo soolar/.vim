@@ -59,6 +59,11 @@ set showtabline=2
 set undolevels=1000
 set backspace=indent,eol,start
 
+" highlight current line
+set cursorline
+" keep the cursor in the middle row of the screen when possible
+set scrolloff=999
+
 let mapleader = ","
 let maplocalleader = "\\"
 
