@@ -100,6 +100,9 @@ nnoremap <leader>h :nohlsearch<cr>
 nnoremap <c-j> :m +1<cr>
 nnoremap <c-k> :m -2<cr>
 
+nnoremap <c-l> :tabn<cr>
+nnoremap <c-h> :tabp<cr>
+
 " strong left and right
 noremap H g0
 noremap L g$
