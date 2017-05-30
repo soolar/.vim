@@ -120,8 +120,7 @@ nnoremap <leader>h :set hlsearch!<cr>
 nnoremap <c-j> :m +1<cr>
 nnoremap <c-k> :m -2<cr>
 
-
-" strong left and right
+" convenient alternative to home/end
 noremap H g0
 noremap L g$
 
@@ -153,8 +152,8 @@ set statusline+=%m      "modified flag
 set statusline+=%r      "read only flag
 set statusline+=%y      "filetype
 set statusline+=%=      "left/right separator
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
+set statusline+=C:%c\   "cursor column
+set statusline+=L:%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 set statusline+=\ %{fugitive#statusline()}
 
