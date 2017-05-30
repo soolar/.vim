@@ -57,11 +57,15 @@ set incsearch
 set hidden
 
 set autoindent
-set expandtab
-set shiftwidth=2
-set smartindent
-set smarttab
-set softtabstop=2
+set noexpandtab
+set shiftwidth=0
+set nosmartindent
+set nosmarttab
+set softtabstop=0
+set tabstop=2
+
+set list
+set listchars=tab:\|\ 
 
 set showtabline=1
 
