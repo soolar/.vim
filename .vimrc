@@ -11,15 +11,22 @@ Plugin 'VundleVim/Vundle.vim'
 " git plugin
 Plugin 'tpope/vim-fugitive'
 " solarized dark
-Plugin 'altercation/vim-colors-solarized.git'
+Plugin 'altercation/vim-colors-solarized'
 " kolmafia .ash syntax highlighting
-Plugin 'quisquous/vim-kolmafia.git'
+Plugin 'quisquous/vim-kolmafia'
 " C/C++ autocomplete, and some other things
-Plugin 'Valloric/YouCompleteMe'
+" disabled because, despite being awesome when it works, it never works
+"Plugin 'Valloric/YouCompleteMe'
+" light-weight tab-completion
+" pointless without tagfile
+"Plugin 'ajh17/VimCompletesMe'
+" tagfile generator
+" needs something to provide ctags
+"Plugin 'ludovicchabant/vim-gutentags'
 " Generator for YCM config
-Plugin 'rdnetto/YCM-Generator'
-" fancy start screen
-Plugin 'mhinz/vim-startify'
+"Plugin 'rdnetto/YCM-Generator'
+" nice file/buffer explorer
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,6 +53,8 @@ set visualbell
 set smartcase
 set ignorecase
 set incsearch
+" allow buffers to remain loaded while out of view
+set hidden
 
 set autoindent
 set expandtab
@@ -54,7 +63,7 @@ set smartindent
 set smarttab
 set softtabstop=2
 
-set showtabline=2
+set showtabline=1
 
 set undolevels=1000
 set backspace=indent,eol,start
@@ -84,6 +93,13 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>f :YcmCompleter FixIt<cr>
 nnoremap <leader>g :YcmDiag<cr>
 
+" some ctrlp shorthands
+nnoremap <leader>b :CtrlPBuffer<cr>
+
+" cycle buffers like I used to cycle tabs
+nnoremap <c-h> :bp<cr>
+nnoremap <c-l> :bn<cr>
+
 " wraps highlighted text
 vnoremap <leader>" <esc>a"<esc>`<i"<esc>
 vnoremap <leader>' <esc>a'<esc>`<i'<esc>
@@ -100,8 +116,6 @@ nnoremap <leader>h :nohlsearch<cr>
 nnoremap <c-j> :m +1<cr>
 nnoremap <c-k> :m -2<cr>
 
-nnoremap <c-l> :tabn<cr>
-nnoremap <c-h> :tabp<cr>
 
 " strong left and right
 noremap H g0
@@ -127,7 +141,7 @@ iabbrev sstr std::string
 
 " statusline stuff
 set laststatus=2
-set statusline=%t       "tail of the filename
+set statusline=%f       "filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
 set statusline+=%{&ff}] "file format
 set statusline+=%h      "help file flag
